@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+      #result{
+        padding: 10px;
+        font-size: 25px;
+      }
+      .wrap{
+        margin: auto;
+      }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+      <input type="text" id="result" readonly>
+    </div>
+
+    <script>
+      let firstNum = Number(prompt("Enter first number: "));
+      let operator = prompt("Choose operator: ( +  -  *  / ) ");
+      let secondNum = Number(prompt("Enter second number: "));
+      let result;
+
+      switch (operator){
+        case "+":
+          result = document.getElementById("result").value = firstNum + secondNum;
+          break;
+
+        case "-":
+          result = document.getElementById("result").value = firstNum - secondNum;
+          break;
+
+        case "*":
+          result = document.getElementById("result").value = firstNum * secondNum;
+          break;
+
+        case "/":
+          result = document.getElementById("result").value = firstNum / secondNum;
+          break;
+
+        default:
+        result = document.getElementById("result").value = "Not valid operator";
+      }
+    </script>
+</body>
+</html>

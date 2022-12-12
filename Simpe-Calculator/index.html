@@ -16,35 +16,39 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <!-- <div class="wrap">
       <input type="text" id="result" readonly>
-    </div>
+    </div> -->
 
     <script>
       let firstNum = Number(prompt("Enter first number: "));
       let operator = prompt("Choose operator: ( +  -  *  / ) ");
       let secondNum = Number(prompt("Enter second number: "));
-      let result;
 
       switch (operator){
+        // addition
         case "+":
-          result = document.getElementById("result").value = firstNum + secondNum;
+          alert(`The sum of ${firstNum} and ${secondNum} is: ${firstNum + secondNum}`);
           break;
 
+        // Subtraction
         case "-":
-          result = document.getElementById("result").value = firstNum - secondNum;
+          alert(`The difference of ${firstNum} and ${secondNum} is: ${firstNum - secondNum}`);
           break;
 
+        // Multiplication
         case "*":
-          result = document.getElementById("result").value = firstNum * secondNum;
+          alert(`The product of ${firstNum} and ${secondNum} is: ${firstNum * secondNum}`);
           break;
 
+        // Division
         case "/":
-          result = document.getElementById("result").value = firstNum / secondNum;
+          alert(`The quotient of ${firstNum} and ${secondNum} is: ${firstNum / secondNum}`);
           break;
 
         default:
         result = document.getElementById("result").value = "Not valid operator";
+        break;
       }
     </script>
 </body>
